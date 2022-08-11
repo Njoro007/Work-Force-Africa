@@ -43,38 +43,12 @@ namespace Stack_LiFo
             _colorStack.Push(RandomColourGenerator(3));
             _colorStack.Push(RandomColourGenerator(4));
 
-
-            //for (int i = 0; i < _colorStack.Count; i++)
-            //{
-            //    p.Name = "panelID" + (i);
-            //    p.BackColor = RandomColourGenerator();
-            //    p.Dock = DockStyle.Top;
-            //}
-
-
             int PanelID = 1;
-            /*foreach (object obj in _colorStack)
-            {
-                p.Name = "panelID" + (PanelID);
-                //setBackground((Color)obj, p.Name);
-                p.BackColor = (Color)obj; //  (Color)obj;
-                //p.Dock = DockStyle.Top;
-                PanelID++;
-                await Task.Delay(500);
-            }*/
             setBackground(_colorStack);
         }
 
         private void btnRemoveStackLiFo_Click(object sender, EventArgs e)
         {
-            //_colorStack.Pop();
-
-            //for (int i = 0; i < _colorStack.Count; i++)
-            //{
-            //    p.Name = "panelID" + (i);
-            //    p.BackColor = Color.White;
-            //    p.Dock = DockStyle.Top;
-            //}
 
             setBackground(_colorStack, true);
         }
@@ -99,18 +73,6 @@ namespace Stack_LiFo
                             await Task.Delay(500);
                         }
                     }
-                    /*else
-                    {
-                        //var element = ColorStack.Reverse().ElementAt(ColorStack.Count - 1);
-                        foreach (var obj in ColorStack.Reverse())
-                        {
-                            if (control.Name.Equals(obj.Name))
-                            {
-                                control.BackColor = Color.White;
-                            }
-                            await Task.Delay(500);
-                        }
-                    }*/
                 }
             }
 
@@ -120,7 +82,6 @@ namespace Stack_LiFo
                 {
                     if (control.GetType() == typeof(System.Windows.Forms.Panel))
                     {
-                        //var panel = ColorStack.Peek();
 
                         ReversePanelColor(ColorStack);
 
